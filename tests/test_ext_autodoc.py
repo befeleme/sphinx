@@ -1399,7 +1399,7 @@ def test_enum_class(app):
     options = {"members": None}
     actual = do_autodoc(app, 'class', 'target.enums.EnumCls', options)
 
-    if sys.version_info < (3, 10):
+    if sys.version_info < (3, 11):
         sig = '(value)'
     else:
         sig = ('(value, names=None, *, module=None, qualname=None, type=None, start=1, '
